@@ -1,0 +1,29 @@
+
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: backend
+  graphql:
+    graphiql:
+      enabled: true
+      path: /graphiql
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        defer-datasource-initialization: true
+        ddl-auto: update
+  sql:
+    init:
+
+      mode: always
+
+
